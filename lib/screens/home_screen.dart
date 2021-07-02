@@ -199,7 +199,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Text(
                             '֯C',
                             style: TextStyle(
-                                color: lightGrey,
+                                color: white,
                                 fontSize: screenSize.height * 0.05,
                                 fontWeight: FontWeight.w100),
                           ),
@@ -404,15 +404,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                                           .round(),
                                               width: screenSize.width * 0.04,
                                               decoration: BoxDecoration(
-                                                borderRadius:
-                                                    BorderRadius.circular(20),
-                                                color: heatHeight > 100
-                                                    ? Colors.deepOrangeAccent
-                                                    : heatHeight < 100 &&
-                                                            heatHeight > 70
-                                                        ? Colors.orange
-                                                        : Colors.blue,
-                                              ),
+                                                  borderRadius:
+                                                      BorderRadius.circular(20),
+                                                  color: heatHeight > 100
+                                                      ? Colors.deepOrangeAccent
+                                                      : Colors.orange),
                                             ),
                                             Text(
                                               '${_timeFormatter(_list?[index].dt ?? 0, index)}',
