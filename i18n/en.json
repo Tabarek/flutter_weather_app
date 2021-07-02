@@ -1,0 +1,17 @@
+{
+"title": "Weather Forecast",
+  "today": "Today",
+  "city": "Baghdad",
+  "country": "IQ",
+  "tomorrow": "Tomorrow",
+  "next_week": "Next 7 Days",
+  "level_of_heat": "Heats Level",
+  "feels_like": "Feels like",
+  "sunset": "Sunset",
+  "wind": "Windً",
+  "visibility": "Visibility",
+  "humidity": "Humidity",
+  "uv": "UV"
+
+
+}
