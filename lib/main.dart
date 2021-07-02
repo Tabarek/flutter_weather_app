@@ -17,12 +17,10 @@ void main() async {
   AppLanguage appLanguage = AppLanguage();
   await appLanguage.fetchLocale();
   setupLocator();
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
-      .then((_) {
-    runApp(App(
-      appLanguage: appLanguage,
-    ));
-  });
+  SystemChrome?.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  runApp(App(
+    appLanguage: appLanguage,
+  ));
 }
 
 class App extends StatelessWidget {
