@@ -72,7 +72,7 @@ class _NextWeekScreenState extends State<NextWeekScreen> {
     });
   }
 
-  /// Day weather in row widget
+  /// Day weather in Card widget
   Widget nextDayInfo({
     var screenSize,
     String? nextDay,
@@ -88,6 +88,7 @@ class _NextWeekScreenState extends State<NextWeekScreen> {
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisSize: MainAxisSize.min,
             children: [
               Text(
                 nextDay!,
@@ -245,13 +246,18 @@ class _NextWeekScreenState extends State<NextWeekScreen> {
                                 children: [
                                   Column(
                                     children: [
-                                      Text(
-                                        weekDay(_dailyList![ind].dt,
-                                            widget.locale!),
-                                        style: TextStyle(
-                                            color: Colors.grey.shade700,
-                                            fontSize: screenSize.height * 0.016,
-                                            fontWeight: FontWeight.w600),
+                                      SizedBox(
+                                        width: screenSize.width * 0.18,
+                                        child: Text(
+                                          weekDay(_dailyList![ind].dt,
+                                              widget.locale!),
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              color: Colors.grey.shade700,
+                                              fontSize:
+                                                  screenSize.height * 0.016,
+                                              fontWeight: FontWeight.w600),
+                                        ),
                                       ),
                                       Text(
                                         '💧 ${_dailyList![ind].humidity}%',
